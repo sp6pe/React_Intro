@@ -1,15 +1,9 @@
+//create new component
 import React from 'react';
-import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import ReactDOM from 'react-DOM';
 
-import App from './components/app';
-import reducers from './reducers';
+const App = () => {
+	return <div> Hi! </div>;
+}
 
-const createStoreWithMiddleware = applyMiddleware()(createStore);
-
-ReactDOM.render(
-  <Provider store={createStoreWithMiddleware(reducers)}>
-    <App />
-  </Provider>
-  , document.querySelector('.container'));
+ReactDOM.render(<App />, document.querySelector('.container')); //need to pass instance of class, not class itself
